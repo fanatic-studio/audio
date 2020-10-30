@@ -1,4 +1,4 @@
-package vd.android.audio.service;
+package eco.android.audio.service;
 
 import android.annotation.SuppressLint;
 import android.content.res.AssetFileDescriptor;
@@ -12,8 +12,8 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import app.vd.framework.ui.vd;
-import vd.android.audio.event.AudioEvent;
+import app.eco.framework.ui.eco;
+import eco.android.audio.event.AudioEvent;
 
 @SuppressLint({"HandlerLeak", "StaticFieldLeak"})
 public class MusicService {
@@ -68,7 +68,7 @@ public class MusicService {
             mPlayer = null;
             mPlayer = new MediaPlayer();
             if (url.startsWith("file://assets/")) {
-                AssetFileDescriptor assetFile = vd.getApplication().getAssets().openFd(url.substring(14));
+                AssetFileDescriptor assetFile = eco.getApplication().getAssets().openFd(url.substring(14));
                 mPlayer.setDataSource(assetFile.getFileDescriptor(), assetFile.getStartOffset(), assetFile.getLength());
             }else{
                 mPlayer.setDataSource(url);
@@ -94,7 +94,7 @@ public class MusicService {
         try {
             mPlayer.reset();
             if (url.startsWith("file://assets/")) {
-                AssetFileDescriptor assetFile = vd.getApplication().getAssets().openFd(url.substring(14));
+                AssetFileDescriptor assetFile = eco.getApplication().getAssets().openFd(url.substring(14));
                 mPlayer.setDataSource(assetFile.getFileDescriptor(), assetFile.getStartOffset(), assetFile.getLength());
             }else{
                 mPlayer.setDataSource(url);

@@ -6,7 +6,7 @@
 #import "audioModule.h"
 #import "audio.h"
 #import "DeviceUtil.h"
-#import "vdViewController.h"
+#import "ecoViewController.h"
 #import <WeexPluginLoader/WeexPluginLoader.h>
 #import <AVFoundation/AVFoundation.h>
 
@@ -19,7 +19,7 @@ static WXModuleKeepAliveCallback callback;
 
 @synthesize weexInstance;
 
-WX_PlUGIN_EXPORT_MODULE(vdAudio, audioModule)
+WX_PlUGIN_EXPORT_MODULE(ecoAudio, audioModule)
 WX_EXPORT_METHOD(@selector(play:))
 WX_EXPORT_METHOD(@selector(pause))
 WX_EXPORT_METHOD(@selector(stop))

@@ -1,6 +1,6 @@
 {
 	"desc": "音频播放、获取音频时长",
-	"requireFormatName": "vdAudio",
-	"requireName": "vd/audio",
+	"requireFormatName": "ecoAudio",
+	"requireName": "eco/audio",
 	"title": "音频播放"
 }

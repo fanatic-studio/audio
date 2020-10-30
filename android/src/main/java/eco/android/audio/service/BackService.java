@@ -1,4 +1,4 @@
-package vd.android.audio.service;
+package eco.android.audio.service;
 
 import android.app.Service;
 import android.content.Intent;

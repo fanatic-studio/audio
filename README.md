@@ -3,19 +3,19 @@
 ## 安装
 
 ```shell script
-vd plugin install https://github.com/kjeco/audio
+eco plugin install https://github.com/kjeco/audio
 ```
 
 ## 卸载
 
 ```shell script
-vd plugin uninstall https://github.com/kjeco/audio
+eco plugin uninstall https://github.com/kjeco/audio
 ```
 
 ## 引用
 
 ```js
-const audio = app.requireModule("vd/audio");
+const audio = app.requireModule("eco/audio");
 ```
 
 ## 播放音频
@@ -130,7 +130,7 @@ audio.getDuration(url, callback(result))
         data(){
             return {
                 res: '',
-                url: 'https://vd.app/assets/samples/audio.mp3',
+                url: 'https://eco.app/assets/samples/audio.mp3',
                 isloop: false
             }
         },

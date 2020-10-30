@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vd.android.audio" >
+    package="eco.android.audio" >
     <application>
-        <service android:name="vd.android.audio.service.BackService"/>
+        <service android:name="eco.android.audio.service.BackService"/>
     </application>
 </manifest>

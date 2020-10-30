@@ -1,4 +1,4 @@
-package vd.android.audio.event;
+package eco.android.audio.event;
 
 public class AudioEvent {
 

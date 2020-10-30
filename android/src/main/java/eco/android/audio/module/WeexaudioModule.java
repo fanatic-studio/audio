@@ -1,4 +1,4 @@
-package vd.android.audio.module;
+package eco.android.audio.module;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,11 +18,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import app.vd.framework.extend.module.vdPage;
-import app.vd.framework.ui.vd;
-import vd.android.audio.event.AudioEvent;
-import vd.android.audio.service.BackService;
-import vd.android.audio.service.MusicService;
+import app.eco.framework.extend.module.ecoPage;
+import app.eco.framework.ui.eco;
+import eco.android.audio.event.AudioEvent;
+import eco.android.audio.service.BackService;
+import eco.android.audio.service.MusicService;
 
 public class WeexaudioModule extends WXModule {
 
@@ -38,7 +38,7 @@ public class WeexaudioModule extends WXModule {
 
     @JSMethod
     public void play(String url) {
-        url = vdPage.rewriteUrl(mWXSDKInstance, url);
+        url = ecoPage.rewriteUrl(mWXSDKInstance, url);
         if (MusicService.getService().playNext(url)) {
             return;
         }
@@ -93,12 +93,12 @@ public class WeexaudioModule extends WXModule {
     private class PlayAsyncTask extends AsyncTask<Object, Integer, Object> {
         @Override
         protected Object doInBackground(Object... objects) {
-            String url = vdPage.rewriteUrl(mWXSDKInstance, String.valueOf(objects[0]));
+            String url = ecoPage.rewriteUrl(mWXSDKInstance, String.valueOf(objects[0]));
             JSCallback call = (JSCallback) objects[1];
             MediaPlayer player = new MediaPlayer();
             try {
                 if (url.startsWith("file://assets/")) {
-                    AssetFileDescriptor assetFile = vd.getApplication().getAssets().openFd(url.substring(14));
+                    AssetFileDescriptor assetFile = eco.getApplication().getAssets().openFd(url.substring(14));
                     player.setDataSource(assetFile.getFileDescriptor(), assetFile.getStartOffset(), assetFile.getLength());
                 }else{
                     player.setDataSource(url);
