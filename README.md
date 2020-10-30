@@ -3,13 +3,13 @@
 ## 安装
 
 ```shell script
-vd plugin install https://github.com/ivde/audio
+vd plugin install https://github.com/kjeco/audio
 ```
 
 ## 卸载
 
 ```shell script
-vd plugin uninstall https://github.com/ivde/audio
+vd plugin uninstall https://github.com/kjeco/audio
 ```
 
 ## 引用
